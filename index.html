@@ -42,6 +42,7 @@
         .item:first-child{
             border: 0;
         }
+
     </style>
 </head>
 <body>
@@ -51,12 +52,13 @@
                 <h3 class="text-4xl text-white  font-bold mb-5">Add Your Shop Items</h3>
             <div class="shop-input flex items-center">
                 <input class="py-1 px-2 text-2xl bg-transparent border-b-2 mr-2 text-white focus:border-green-600 border-b-slate-400 outline-0" type="text" placeholder="Enter Your Items">
-                <button class="bg-transparent hover:opacity-[0.8]"><img class="h-8 w-8" src="./image/download-removebg-preview.png"   alt=""></button>
+                <button class="bg-transparent hover:opacity-[0.8]"><img class="h-8 w-8 " src="./image/download-removebg-preview.png"   alt=""></button>
             </div>
         </div>
         <div class="items-header w-3/4">
             <h2 class="text-2xl text-left block text-white  font-normal pb-0 mb-0 mt-5">Your Items:</h2>
         </div>
+        <!-- start the  shopping items  -->
             <div class="items my-2 w-3/4 border-t-2 p-4">
                 <!-- item one  -->
                 <div class="item flex justify-between items-center">
@@ -64,7 +66,7 @@
                         <div class="h-3 w-3 bg-red-600 rounded-2xl"></div>
                     </div>
                     <div class="item-text">
-                        <span class="text-2xl text-white font-bold  ">t-shirt</span>
+                        <span class="text-2xl text-white font-semibold lg:font-bold tracking-widest ">t-shirt</span>
                     </div>
                     <div class="item-action flex items-center">
                         <button>
@@ -92,14 +94,13 @@
                             <img src="./image/cross-removebg-preview.png" class="w-8 hover:opacity-[.8]" alt="">
                         </button>
                     </div>
-
                 </div>
-                
-
-                
-
-
             </div>
+            <!-- all clear button  -->
+            <div class="clear-btn  mt-8">
+                <button class="text-white text-1xl font-semibold hover:bg-white ease-in-out duration-300 hover:text-red-500 py-4 px-8 rounded-lg border ">Clear All Items</button>
+            </div>
+            
 
         </section>
 
