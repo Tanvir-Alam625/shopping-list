@@ -27,25 +27,75 @@
             background-image: linear-gradient(rgba(7, 86, 100, 0.753), rgba(52, 3, 87, 0.692));
             min-height: 500px;
         }
-        h3{
+        h3,h2{
             font-family: var(--IBM-font);
         }
         input{
             font-family: var(--manrope-font);
         }
+        .item-text span{
+            font-family: var(--manrope-font);
+        }
+        .item{
+            border-top: .6px solid rgb(114, 111, 111);
+        }
+        .item:first-child{
+            border: 0;
+        }
     </style>
 </head>
 <body>
     <main class="min-h-screen w-full bg-cover flex justify-center items-center">
-        <section class="w-4/5 p-8 rounded-lg flex justify-center  ">
+        <section class="w-4/5 p-8 rounded-lg flex items-center flex-col ">
             <div class="shoping-items">
                 <h3 class="text-4xl text-white  font-bold mb-5">Add Your Shop Items</h3>
             <div class="shop-input flex items-center">
                 <input class="py-1 px-2 text-2xl bg-transparent border-b-2 mr-2 text-white focus:border-green-600 border-b-slate-400 outline-0" type="text" placeholder="Enter Your Items">
-                <button class="bg-transparent hover:opacity-[0.8]"><img src="./image/download-removebg-preview.png"  height="30" width="40" alt=""></button>
+                <button class="bg-transparent hover:opacity-[0.8]"><img class="h-8 w-8" src="./image/download-removebg-preview.png"   alt=""></button>
             </div>
-            </div>
-            <div class="items">
+        </div>
+        <div class="items-header w-3/4">
+            <h2 class="text-2xl text-left block text-white  font-normal pb-0 mb-0 mt-5">Your Items:</h2>
+        </div>
+            <div class="items my-2 w-3/4 border-t-2 p-4">
+                <!-- item one  -->
+                <div class="item flex justify-between items-center">
+                    <div class="item-icons">
+                        <div class="h-3 w-3 bg-red-600 rounded-2xl"></div>
+                    </div>
+                    <div class="item-text">
+                        <span class="text-2xl text-white font-bold  ">t-shirt</span>
+                    </div>
+                    <div class="item-action flex items-center">
+                        <button>
+                            <img src="./image/success-icon-png-22.jpg" class="w-8 mr-2 hover:opacity-[.8] " alt="">
+                        </button>
+                        <button>
+                            <img src="./image/cross-removebg-preview.png" class="w-8 hover:opacity-[.8]" alt="">
+                        </button>
+                    </div>
+
+                </div>
+                <!-- second item  -->
+                <div class="item flex justify-between items-center">
+                    <div class="item-icons">
+                        <div class="h-3 w-3 bg-red-600 rounded-2xl"></div>
+                    </div>
+                    <div class="item-text">
+                        <span class="text-2xl text-white font-bold  ">t-shirt</span>
+                    </div>
+                    <div class="item-action flex items-center">
+                        <button>
+                            <img src="./image/success-icon-png-22.jpg" class="w-8 mr-2 hover:opacity-[.8] " alt="">
+                        </button>
+                        <button>
+                            <img src="./image/cross-removebg-preview.png" class="w-8 hover:opacity-[.8]" alt="">
+                        </button>
+                    </div>
+
+                </div>
+                
+
                 
 
 
