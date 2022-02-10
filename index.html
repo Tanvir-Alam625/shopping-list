@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <!-- tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --IBM-font: 'IBM Plex Sans Thai Looped', sans-serif;
+            --inter-font: 'Inter', sans-serif;
+            --manrope-font: 'Manrope', sans-serif;
+        }
+        main{
+            /* height: 100vh;
+            width: 100%; */
+            background-image: linear-gradient(rgba(13, 41, 133, 0.212),rgba(26, 18, 37, 0.37)),url('./image/unsplash-5-KmbSe5ivg-unsplash.jpg');
+            /* background-size: cover; */
+        }
+        section{
+            background-image: linear-gradient(rgba(7, 86, 100, 0.753), rgba(52, 3, 87, 0.692));
+            min-height: 500px;
+        }
+        h3{
+            font-family: var(--IBM-font);
+        }
+        input{
+            font-family: var(--manrope-font);
+        }
+    </style>
+</head>
+<body>
+    <main class="min-h-screen w-full bg-cover flex justify-center items-center">
+        <section class="w-4/5 p-8 rounded-lg flex justify-center  ">
+            <div class="shoping-items">
+                <h3 class="text-4xl text-white  font-bold mb-5">Add Your Shop Items</h3>
+            <div class="shop-input flex items-center">
+                <input class="py-1 px-2 text-2xl bg-transparent border-b-2 mr-2 text-white focus:border-green-600 border-b-slate-400 outline-0" type="text" placeholder="Enter Your Items">
+                <button class="bg-transparent hover:opacity-[0.8]"><img src="./image/download-removebg-preview.png"  height="30" width="40" alt=""></button>
+            </div>
+            </div>
+            <div class="items">
+                
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+</body>
+</html>
