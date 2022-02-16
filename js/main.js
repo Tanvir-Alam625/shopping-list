@@ -20,7 +20,7 @@ addButton.addEventListener('click',function(){
     else{
         const othersItem = document.createElement('div');
     othersItem.innerHTML = `
-                <div id="my-item" class="item flex justify-around pt-2 px-2 items-center">
+                <div id="my-item" class="item flex justify-between pt-2 px-2 items-center">
                     <div class="h-3 w-3 bg-red-600  rounded-2xl"></div>
                     <span class=" capitalize text-1xl md:text-2xl text-white font-normal md:font-bold  tracking-widest ">${inputValue.value}</span>
                     <div class="item-action flex items-center">
@@ -39,19 +39,16 @@ addButton.addEventListener('click',function(){
     const successButton =document.getElementsByClassName('success-btn');
     for(const success of successButton){
         success.addEventListener('click', function(event){
-            event.target.parentNode.parentNode.style.display = "none";
-            event.target.parentNode.parentNode.parentNode.style.justifyContent = 'space-between';
-            const circleStyle = event.target.parentNode.parentNode.parentNode.childNodes[1].style.backgroundColor = 'green';
-            // console.log(circleStyle);
+            event.target.parentNode.parentNode.childNodes[3].style.display = "none";
+            event.target.parentNode.parentNode.childNodes[1].style.opacity = "0.4";
+            event.target.parentNode.parentNode.parentNode.childNodes[1].style.backgroundColor = 'green';
         });
     }
     // delete one element event 
     const deleteButton = document.getElementsByClassName("delete-btn");
         for (const button of deleteButton) {
             button.addEventListener("click", function (event) {
-                console.log('hello');
                 event.target.parentNode.parentNode.parentNode.style.display = "none";
-                // console.log(e.target.parentNode.parentNode);
             });
         }
     }
@@ -64,19 +61,6 @@ allClearButton.addEventListener('click',function (){
         shopItem.style.display = 'none';
     }
 })
-// successButton event
-// const dangerButton = document.getElementsByClassName('danger-btn');
-// console.log(dangerButton);
-// for( const dangerBtn of dangerButton ){
-//     console.log(dangerBtn)
-//     dangerBtn.addEventListener('click', function (e){
-//         console.log('hello');
-//         // event.target.parentNode.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode.parentNode);
-//         // e.target.parentNode.parentNode.parentNode.style.display = "none";
-
-//     })
-
-// }
 
 
 
