@@ -20,33 +20,42 @@ addButton.addEventListener('click',function(){
     else{
         const othersItem = document.createElement('div');
     othersItem.innerHTML = `
-                <div id="my-item" class="item flex justify-between pt-2  items-center">
-                <div class="h-3 w-3 bg-red-600 rounded-2xl"></div>
-                <span class=" capitalize text-1xl md:text-2xl text-white font-normal md:font-bold  tracking-widest ">${inputValue.value}</span>
-                <div class="item-action flex items-center">
-                    <button  class="success-btn">
-                        <img src="./image/success-icon-png-22.jpg" class="w-6 md:w-8 mr-2 ease-out duration-300 hover:opacity-[.8] " alt="">
-                    </button>
-                    <button class="delete-btn">
-                        <img src="./image/cross-removebg-preview.png" class="w-6 md:w-8 ease-out duration-300 hover:opacity-[.8]" alt="">
-                    </button>
-                </div>
+                <div id="my-item" class="item flex justify-around pt-2 px-2 items-center">
+                    <div class="h-3 w-3 bg-red-600  rounded-2xl"></div>
+                    <span class=" capitalize text-1xl md:text-2xl text-white font-normal md:font-bold  tracking-widest ">${inputValue.value}</span>
+                    <div class="item-action flex items-center">
+                        <button  class="success-btn">
+                            <img src="./image/success-icon-png-22.jpg" class="w-6 md:w-8 mr-2 ease-out duration-300 hover:opacity-[.8] " alt="">
+                        </button>
+                        <button class="delete-btn">
+                            <img src="./image/cross-removebg-preview.png" class="w-6 md:w-8 ease-out duration-300 hover:opacity-[.8]" alt="">
+                        </button>
+                    </div>
             </div>
                     `;
     parentItem.appendChild(othersItem);
     inputValue.value = '';
-
-
+    // success event handler
+    const successButton =document.getElementsByClassName('success-btn');
+    for(const success of successButton){
+        success.addEventListener('click', function(event){
+            event.target.parentNode.parentNode.style.display = "none";
+            event.target.parentNode.parentNode.parentNode.style.justifyContent = 'space-between';
+            const circleStyle = event.target.parentNode.parentNode.parentNode.childNodes[1].style.backgroundColor = 'green';
+            // console.log(circleStyle);
+        });
+    }
+    // delete one element event 
     const deleteButton = document.getElementsByClassName("delete-btn");
-console.log(deleteButton);
-    for (const button of deleteButton) {
-      button.addEventListener("click", function (e) {
-          console.log('hello');
-        e.target.parentNode.parentNode.parentNode.style.display = "none";
-        // console.log(e.target.parentNode.parentNode);
-      });
+        for (const button of deleteButton) {
+            button.addEventListener("click", function (event) {
+                console.log('hello');
+                event.target.parentNode.parentNode.parentNode.style.display = "none";
+                // console.log(e.target.parentNode.parentNode);
+            });
+        }
     }
-    }
+    // end the else block
 });
 // all clear event 
 allClearButton.addEventListener('click',function (){
